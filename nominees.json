@@ -1,0 +1,10 @@
+[
+  { "name": "Harry Kane", "club": "Bayern Munich", "probability": 27 },
+  { "name": "Ousmane Dembélé", "club": "Paris Saint-Germain", "probability": 19 },
+  { "name": "Kylian Mbappé", "club": "Real Madrid", "probability": 14 },
+  { "name": "Lamine Yamal", "club": "Barcelona", "probability": 12 },
+  { "name": "Erling Haaland", "club": "Manchester City", "probability": 11 },
+  { "name": "Lionel Messi", "club": "Inter Miami", "probability": 8 },
+  { "name": "Jude Bellingham", "club": "Real Madrid", "probability": 5 },
+  { "name": "Vitinha", "club": "Paris Saint-Germain", "probability": 4 }
+]

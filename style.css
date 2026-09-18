@@ -1,0 +1,216 @@
+/* ---------- Design tokens ---------- */
+/* Change these 6 values and the whole site's look changes with them. */
+:root {
+  --ink: #0b0e14;          /* page background — near-black navy, not pure black */
+  --panel: #12161f;        /* countdown card + row hover background */
+  --rule: #232838;         /* hairline divider lines */
+  --gold: #c6a15b;         /* trophy gold — main accent */
+  --gold-bright: #e8c468;  /* brighter gold, used for the probability bar fill */
+  --text: #edeae2;         /* main text, warm off-white */
+  --text-muted: #7c8494;   /* secondary text */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Hero section ---------- */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 6vh 6vw;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(198,161,91,0.08), transparent 45%),
+    var(--ink);
+}
+
+.hero-inner { max-width: 640px; }
+
+.edition {
+  margin: 0 0 8px 0;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(3rem, 9vw, 6rem);
+  line-height: 0.95;
+}
+
+.venue {
+  margin: 20px 0 40px 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ---------- Countdown ---------- */
+.countdown {
+  display: flex;
+  gap: 20px;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.flip-card {
+  position: relative;
+  width: 76px;
+  height: 92px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 300px; /* gives the flip its 3D depth */
+}
+
+/* the horizontal seam that makes it read as a mechanical flip card */
+.flip-card::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 1px;
+  background: rgba(0,0,0,0.5);
+}
+
+.flip-card span {
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--gold-bright);
+}
+
+/* Applied briefly via JS whenever a digit changes — this IS the 3D flip */
+.flip-card.flip span {
+  animation: flip-turn 0.5s ease;
+}
+
+@keyframes flip-turn {
+  0%   { transform: rotateX(0deg); }
+  50%  { transform: rotateX(90deg); }
+  100% { transform: rotateX(0deg); }
+}
+
+.unit-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* ---------- Leaderboard ---------- */
+.board {
+  padding: 8vh 6vw 10vh 6vw;
+  border-top: 1px solid var(--rule);
+}
+
+.board-inner { max-width: 760px; margin: 0 auto; }
+
+.board h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 8px 0;
+}
+
+.board-note {
+  color: var(--text-muted);
+  margin: 0 0 32px 0;
+}
+
+.leaderboard {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.leaderboard li {
+  display: grid;
+  grid-template-columns: 32px 44px 1fr 120px 48px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 8px;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.2s ease;
+}
+
+.leaderboard li:hover { background: var(--panel); }
+
+.rank {
+  font-family: 'Fraunces', serif;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+.name-club .name { font-weight: 600; }
+.name-club .club { color: var(--text-muted); font-size: 0.85rem; }
+
+.bar-track {
+  height: 6px;
+  background: var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--gold-bright);
+  width: 0%; /* JS animates this up to the real value on load */
+  transition: width 1s ease;
+}
+
+.percent {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 24px 6vw 40px 6vw;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer code {
+  color: var(--text);
+  background: var(--panel);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 480px) {
+  .flip-card { width: 58px; height: 72px; }
+  .flip-card span { font-size: 1.9rem; }
+  .leaderboard li { grid-template-columns: 24px 36px 1fr 70px 40px; gap: 10px; }
+}

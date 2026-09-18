@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ballon d'Or 2026 — Countdown & Win Probability</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <!-- HERO: title + countdown -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="edition">70th edition</p>
+        <h1>Ballon d'Or</h1>
+        <p class="venue">Monday, 26 October 2026<br>London Palladium</p>
+
+        <!-- Countdown blocks. JS fills in the numbers and flips them. -->
+        <div class="countdown" id="countdown">
+          <div class="unit">
+            <div class="flip-card"><span id="days">00</span></div>
+            <span class="unit-label">Days</span>
+          </div>
+          <div class="unit">
+            <div class="flip-card"><span id="hours">00</span></div>
+            <span class="unit-label">Hours</span>
+          </div>
+          <div class="unit">
+            <div class="flip-card"><span id="minutes">00</span></div>
+            <span class="unit-label">Minutes</span>
+          </div>
+          <div class="unit">
+            <div class="flip-card"><span id="seconds">00</span></div>
+            <span class="unit-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERBOARD: nominees ranked by estimated win probability -->
+    <section class="board">
+      <div class="board-inner">
+        <h2>Win probability</h2>
+        <p class="board-note">An estimate built from season stats — not the journalists' actual vote.</p>
+
+        <!-- JS builds one <li> per nominee inside this list -->
+        <ol class="leaderboard" id="leaderboard"></ol>
+      </div>
+    </section>
+
+    <footer>
+      <p>Nominee data loaded from <code>nominees.json</code> — replace it with your scraper's output.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
