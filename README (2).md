@@ -22,10 +22,7 @@ python -m http.server 8000
 
 Then open `http://localhost:8000` in your browser. Stop the server with `Ctrl+C`.
 
-## Put it on GitHub Pages
-1. Create a new GitHub repo, push these files to it.
-2. Repo Settings → Pages → set source to the `main` branch, root folder.
-3. Your site goes live at `https://<your-username>.github.io/<repo-name>/`.
+Messi's stats approximate the eligibility window using full MLS 2025 season data due to calendar misalignment with European leagues.
 
 ## Note on the probability numbers
 These are estimates from stats, not the real jury result — the Ballon d'Or is

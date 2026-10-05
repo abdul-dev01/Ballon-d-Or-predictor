@@ -1,10 +1,137 @@
 [
-  { "name": "Harry Kane", "club": "Bayern Munich", "probability": 27 },
-  { "name": "Ousmane Dembélé", "club": "Paris Saint-Germain", "probability": 19 },
-  { "name": "Kylian Mbappé", "club": "Real Madrid", "probability": 14 },
-  { "name": "Lamine Yamal", "club": "Barcelona", "probability": 12 },
-  { "name": "Erling Haaland", "club": "Manchester City", "probability": 11 },
-  { "name": "Lionel Messi", "club": "Inter Miami", "probability": 8 },
-  { "name": "Jude Bellingham", "club": "Real Madrid", "probability": 5 },
-  { "name": "Vitinha", "club": "Paris Saint-Germain", "probability": 4 }
+  {
+    "name": "Lionel Messi",
+    "club": "Inter Miami",
+    "probability": 14.9
+  },
+  {
+    "name": "Harry Kane",
+    "club": "Bayern Munich",
+    "probability": 7.8
+  },
+  {
+    "name": "Erling Haaland",
+    "club": "Manchester City",
+    "probability": 6.7
+  },
+  {
+    "name": "Michael Olise",
+    "club": "Bayern Munich",
+    "probability": 6.0
+  },
+  {
+    "name": "Julián Quiñones",
+    "club": "Al-Qadsiah",
+    "probability": 5.6
+  },
+  {
+    "name": "Luis Díaz",
+    "club": "Bayern Munich",
+    "probability": 5.5
+  },
+  {
+    "name": "Lamine Yamal",
+    "club": "Barcelona",
+    "probability": 5.3
+  },
+  {
+    "name": "Kylian Mbappé",
+    "club": "Real Madrid",
+    "probability": 4.5
+  },
+  {
+    "name": "Ferran Torres",
+    "club": "Barcelona",
+    "probability": 4.3
+  },
+  {
+    "name": "Ousmane Dembélé",
+    "club": "Paris SG",
+    "probability": 3.9
+  },
+  {
+    "name": "Bruno Fernandes",
+    "club": "Manchester Utd",
+    "probability": 3.7
+  },
+  {
+    "name": "Khvicha Kvaratskhelia",
+    "club": "Paris SG",
+    "probability": 3.3
+  },
+  {
+    "name": "Sadio Mané",
+    "club": "Al Nassr",
+    "probability": 3.0
+  },
+  {
+    "name": "Achraf Hakimi",
+    "club": "Paris SG",
+    "probability": 2.9
+  },
+  {
+    "name": "Nuno Mendes",
+    "club": "Paris SG",
+    "probability": 2.8
+  },
+  {
+    "name": "João Neves",
+    "club": "Paris SG",
+    "probability": 2.5
+  },
+  {
+    "name": "Rodri",
+    "club": "Manchester City",
+    "probability": 2.5
+  },
+  {
+    "name": "Vitinha",
+    "club": "Paris SG",
+    "probability": 2.5
+  },
+  {
+    "name": "Declan Rice",
+    "club": "Arsenal",
+    "probability": 2.0
+  },
+  {
+    "name": "Dayot Upamecano",
+    "club": "Bayern Munich",
+    "probability": 1.8
+  },
+  {
+    "name": "Marquinhos",
+    "club": "Paris SG",
+    "probability": 1.6
+  },
+  {
+    "name": "Willian Pacho",
+    "club": "Paris SG",
+    "probability": 1.6
+  },
+  {
+    "name": "Marc Cucurella",
+    "club": "Chelsea",
+    "probability": 1.4
+  },
+  {
+    "name": "Jude Bellingham",
+    "club": "Real Madrid",
+    "probability": 1.4
+  },
+  {
+    "name": "William Saliba",
+    "club": "Arsenal",
+    "probability": 0.9
+  },
+  {
+    "name": "Gabriel Magalhães",
+    "club": "Arsenal",
+    "probability": 0.9
+  },
+  {
+    "name": "Fabián Ruiz Peña",
+    "club": "Paris SG",
+    "probability": 0.6
+  }
 ]
